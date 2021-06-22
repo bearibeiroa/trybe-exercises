@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+body {
+    font-family: 'Open Sans', 'Helvetica';
+}
+
 nav {
     background-color: darkgreen;
     border-bottom: 1px solid white;
@@ -15,14 +19,12 @@ nav {
     text-decoration: none;
     margin: 5px;
     padding: 10px;
-    font-family: 'Open Sans', 'Helvetica';
 }
 
 header {
     background-color: #5e5c5c;
     text-align: center;
     padding: 60px;
-    font-family: 'Open Sans', 'Helvetica';
 }
 
 .main-title {
@@ -34,4 +36,61 @@ header {
 .subtitle {
     font-style: italic;
     color: rgb(103, 238, 103);
+}
+
+main {
+    padding: 30px;
+    width: 65%;
+    text-align: justify;
+}
+
+.intro-article {
+    font-size: 20px;
+}
+
+.intro-title {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.image-article {
+    width: 800px;
+}
+
+.paragraph {
+    margin: 10px 50px 10px 0px;
+}
+
+.text-paragraph {
+    line-height: 1.8;
+    margin: 10px 50px 10px 0px;
+}
+
+.sidebar-info {
+    width: 20%;
+    float: right;
+    text-align: left;
+    border: 1px solid green;
+    padding: 20px;
+    width: 280px;
+    margin-top: 85px;
+    margin-right: 20px;
+    display: table;
+}
+
+table {
+    margin: 20px 0 20px 0;
+}
+
+.bibliografia {
+    margin-bottom: 20px;
+}
+
+.item-bibli {
+    list-style-type: none;
+    margin: 10px;
+}
+
+a {
+    color: green
 }
