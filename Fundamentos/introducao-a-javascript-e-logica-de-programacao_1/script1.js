@@ -1,4 +1,4 @@
-let a = 2;
+let a = 6;
 let b = 11;
 
 console.log("Soma: " + (a + b));
