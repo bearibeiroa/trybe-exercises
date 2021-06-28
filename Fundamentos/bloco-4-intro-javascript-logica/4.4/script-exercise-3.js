@@ -1,3 +1,5 @@
+//Faça um for/in que mostre todas as chaves do objeto.
+
 let info = {
     personagem: 'Margarida',
     origem: 'Pato Donald',
@@ -7,5 +9,5 @@ let info = {
 
 
 for (let key in info) {
-    console.log(info[key]);
+    console.log(key);
 }
