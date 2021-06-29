@@ -1,4 +1,4 @@
-function verificaPalindromo(word) {
+function verificaPalindrome(word) {
     for (index in word) {
         if (word[index] != word[(word.length - 1) - index]) {
             return false;
@@ -6,7 +6,6 @@ function verificaPalindromo(word) {
     }
     return true;
 }
-
 
 console.log(verificaPalindrome('arara'));
 console.log(verificaPalindrome('desenvolvimento'));
