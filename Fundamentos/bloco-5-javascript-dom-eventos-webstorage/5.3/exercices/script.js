@@ -43,3 +43,14 @@ function DaysOfTheMonth() {
     }
 }
 DaysOfTheMonth();
+
+//Exercício 2 - Insira o botão "Feriados" com ID "btn-holiday" dentro da <div class = "buttons-container">
+
+function holidayOfTheMonth() {
+    let holiday = document.querySelector(".buttons - container");
+    let holidayBtn = document.createElement('button');
+    holidayBtn.innerText = "Feriados";
+    holidayBtn.id = "btn-holiday";
+    holiday.appendChild(holidayBtn);
+}
+holidayOfTheMonth(Feriados)
