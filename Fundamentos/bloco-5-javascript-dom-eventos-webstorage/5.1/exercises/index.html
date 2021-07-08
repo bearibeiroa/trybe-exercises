@@ -45,12 +45,22 @@
         </section>
     </main>
     <script>
-        /* 1 - Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos.*/
-        function IntwoYears() {
+        /* 1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos.*/
+        function inTwoYears() {
             const twoYears = document.getElementsByTagName("p")[1];
             twoYears.innerText = "Feliz profissionalmente trabalhando como desenvolvedora web";
         }
-        IntwoYears()
+        inTwoYears();
+
+        /* 2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).*/
+
+        function changeColorSquare() {
+            const changeColor = document.getElementsByClassName("main-content");
+            for (index = 0; index < changeColor.length; index += 1) {
+                changeColor[index].style.backgroundColor = "rgb(76, 164, 109)";
+            }
+        }
+        changeColorSquare()
     </script>
 </body>
 
