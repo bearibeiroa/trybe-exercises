@@ -82,6 +82,7 @@
         correctTitle();
 
         /* 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.*/
+
         function textParagraphs() {
             const paragraphs = document.getElementsByTagName("p");
             for (index = 0; index < paragraphs.length; index += 1) {
@@ -89,6 +90,16 @@
             }
         }
         textParagraphs();
+
+        /* 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.*/
+
+        function showParagraphs() {
+            const showAllParagraphs = document.getElementsByTagName("p");
+            for (index = 0; index < showAllParagraphs.length; index += 1) {
+                console.log(showAllParagraphs[index].innerHTML);
+            }
+        }
+        showParagraphs()
     </script>
 </body>
 
