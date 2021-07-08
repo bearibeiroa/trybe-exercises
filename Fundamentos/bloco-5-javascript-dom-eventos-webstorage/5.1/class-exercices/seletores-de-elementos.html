@@ -37,10 +37,11 @@
         console.log(paragrafo);
 
         /* 3 - Altere algum estilo do primeiro deles.*/
-        document.getElementsByClassName("para")[0].style.textDecoration = "underline";
+        paragrafo[0].style.textDecoration = "underline";
 
         /* 4 - Recupere o subtítulo e altere a cor dele usando a função getElementsByTagName*/
-        document.getElementsByTagName("h4")[0].style.color = 'black';
+        const subtitulo = document.getElementsByTagName("h4")[0];
+        subtitulo.style.color = 'black';
     </script>
 </body>
 
