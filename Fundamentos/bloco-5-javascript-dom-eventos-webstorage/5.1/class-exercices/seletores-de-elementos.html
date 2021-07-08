@@ -8,16 +8,18 @@
         <h4 id="subtitle">Subtítulo</h4>
         <p id="second-paragraph" class="para">Segundo parágrafo!</p>
     </header>
+   
     <script>
         const paragraph = document.getElementById("paragraph");
-        paragraph.style.fontSize = "50px ";
-        paragraph.style.color = "red ";
+        paragraph.style.fontSize = "50px";
+        paragraph.style.color = "red";
 
         /* 1 - Recupere o elemento que contém o título da página e faça algo com ele, como alterá-lo para o nome do seu filme favorito. */
         const pageTitle = document.getElementById('page-title')
         pageTitle.innerText = 'Thruman Show';
-        pageTitle.style.fontSize = "80px ";
-        pageTitle.style.color = "orange ";
+        pageTitle.style.fontSize = "80px";
+        pageTitle.style.color = "orange";
+
 
         /* 2 - Agora recupere o segundo parágrafo e use sua criatividade para 
         alterá-lo. */
@@ -42,6 +44,7 @@
         /* 4 - Recupere o subtítulo e altere a cor dele usando a função getElementsByTagName*/
         const subtitulo = document.getElementsByTagName("h4")[0];
         subtitulo.style.color = 'black';
+
     </script>
 </body>
 
