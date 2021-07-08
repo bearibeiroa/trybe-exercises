@@ -70,6 +70,13 @@
             }
         }
         changeMainSquareColor();
+
+        /* 4. Crie uma função que corrija o texto da tag <h1>.*/
+        function correctTitle() {
+            const titleText = document.getElementsByTagName("h1");
+            titleText[0].innerText = "Exercício 5.1 - JavaScript";
+        }
+        correctTitle();
     </script>
 </body>
 
