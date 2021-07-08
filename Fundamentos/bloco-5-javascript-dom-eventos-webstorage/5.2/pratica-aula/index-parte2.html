@@ -24,16 +24,25 @@
 
     <script>
         // 1. Crie um irmão para `elementoOndeVoceEsta`.
-        const pai = document.getElementById('pai');
-        const irmaoElementoOndeVoceEsta = document.createElement('div');
-        irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
-        pai.appendChild(irmaoElementoOndeVoceEsta);
+        function brotherElement() {
+            const pai = document.getElementById('pai');
+            const brotherCreator = document.createElement("p");
+            brotherCreator.classList = 'irmaoElementoOndeVoceEsta'
+            brotherCreator.innerText = 'Esse parágrafo foi criado com JS';
+            pai.appendChild(brotherCreator);
+        }
+        brotherElement()
 
         // 2. Crie um filho para `elementoOndeVoceEsta`.
-        const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
-        const filhoElementoOndeVoceEsta = document.createElement('div');
-        filhoElementoOndeVoceEsta.id = 'filhoElementoOndeVoceEsta';
-        elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta);
+        function sonElement() {
+            const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+            const sonCreator = document.createElement('h2');
+            sonCreator.id = 'filhoElementoOndeVoceEsta';
+            sonCreator.innerText = "Título adicionado com JS";
+            sonCreator.style.color = 'orange';
+            elementoOndeVoceEsta.appendChild(sonCreator);
+        }
+        sonElement();
 
         // 3. Crie um filho para `primeiroFilhoDoFilho`.
         const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho')
