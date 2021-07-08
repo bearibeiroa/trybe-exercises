@@ -46,6 +46,7 @@
     </main>
     <script>
         /* 1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos.*/
+
         function inTwoYears() {
             const twoYears = document.getElementsByTagName("p")[1];
             twoYears.innerText = "Feliz profissionalmente trabalhando como desenvolvedora web";
@@ -63,6 +64,7 @@
         changeColorSquare()
 
         /*3. Crie uma função que mude a cor do quadrado vermelho para branco.*/
+
         function changeMainSquareColor() {
             const mainSquare = document.getElementsByClassName("center-content");
             for (index = 0; index < mainSquare.length; index += 1) {
@@ -72,11 +74,21 @@
         changeMainSquareColor();
 
         /* 4. Crie uma função que corrija o texto da tag <h1>.*/
+
         function correctTitle() {
             const titleText = document.getElementsByTagName("h1");
             titleText[0].innerText = "Exercício 5.1 - JavaScript";
         }
         correctTitle();
+
+        /* 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.*/
+        function textParagraphs() {
+            const paragraphs = document.getElementsByTagName("p");
+            for (index = 0; index < paragraphs.length; index += 1) {
+                paragraphs[index].style.textTransform = "uppercase";
+            }
+        }
+        textParagraphs();
     </script>
 </body>
 
