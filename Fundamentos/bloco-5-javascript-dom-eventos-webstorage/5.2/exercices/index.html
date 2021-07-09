@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width">
     <title>Exercício 5.2</title>
     <style>
         div {
@@ -67,6 +67,81 @@
         body.appendChild(title);
 
         // 2. Adicione a tag div com a classe main-content como filho da tag body;
+        const main = document.createElement('main');
+        body.appendChild(main);
+
+        // 3. Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+        const getMain = document.querySelector('main');
+        const section = document.createElement('section');
+        getMain.appendChild(section)
+        section.classList.add('center-content')
+
+        // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+        const getSection = document.querySelector('section');
+        const paragraph = document.createElement('p');
+        getSection.appendChild(paragraph)
+
+        // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+        const sectionTwo = document.createElement('section');
+        getMain.appendChild(sectionTwo);
+        sectionTwo.classList.add('left-content');
+
+        // 6. Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+        const sectionThree = document.createElement('section');
+        getMain.appendChild(sectionThree);
+        sectionThree.classList.add('right-content');
+
+        // 7. Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
+        const getSectionFive = document.querySelector('.left-content');
+        const image = document.createElement('img');
+        image.src = 'https://picsum.photos/200';
+        image.classList.add('small-image')
+        getSectionFive.appendChild(image);
+
+        // 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+        const getSectionSix = document.querySelector('.right-content');
+        const createList = document.createElement('ul');
+        getSectionSix.appendChild(createList);
+        for (index = 1; index < 11; index += 1) {
+            listItem = [index];
+            const listUniqueItem = document.createElement('li');
+            listUniqueItem.innerText = listItem;
+            const listRecover = document.getElementsByTagName('ul');
+            listRecover[0].appendChild(listUniqueItem);
+        }
+
+        // 9. Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+
+        for (index = 0; index < 3; index += 1) {
+            const tripleTitle = document.createElement('h3');
+            getMain.appendChild(tripleTitle);
+        }
+
+        //Vamos fazer algumas alterações e remoções:
+
+        //1. Adicione a classe title na tag h1 criada;
+        title.classList.add('title');
+
+        // 2. Adicione a classe description nas 3 tags h3 criadas;
+        const titleH3 = document.querySelectorAll('h3');
+        for (index = 0; index < titleH3.length; index += 1) {
+            titleH3[index].classList.add('description');
+        }
+        // 3. Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild();
+        getMain.removeChild(getSectionFive);
+
+        // 4. Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section;
+        getSectionSix.style.marginRight = 'auto';
+
+        // 5. Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+
+        getMain.style.backgroundColor = 'green';
+
+        // 6. Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+        const getList = document.getElementsByTagName('li');
+        const dadsList = document.querySelector('ul')
+        dadsList.lastChild.remove(getList);
+        dadsList.lastChild.remove(getList);
     </script>
 </body>
 
