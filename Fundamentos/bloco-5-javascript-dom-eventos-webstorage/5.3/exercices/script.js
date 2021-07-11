@@ -49,3 +49,50 @@ function holidays(string) {
     buttonFather.appendChild(createButton);
 }
 holidays('Feriados');
+
+/* 3. Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday". */
+
+function holidaysShow() {
+    const buttonFeriados = document.querySelector('#btn-holiday');
+    const feriados = document.querySelectorAll('.holiday');
+    buttonFeriados.addEventListener('click', function() {
+        for (let index = 0; index < feriados.length; index += 1) {
+            if (feriados[index].style.backgroundColor === "rgb(238, 238, 238)") {
+                feriados[index].style.backgroundColor = "lightgreen";
+            } else {
+                feriados[index].style.backgroundColor = "rgb(238, 238, 238)";
+            }
+        }
+
+    })
+};
+holidaysShow();
+
+/* 4. Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira". */
+
+function FridayDay(string) {
+    const buttonPai = document.querySelector('.buttons-container');
+    const fridayButton = document.createElement('button');
+    fridayButton.innerHTML = string;
+    fridayButton.id = "btn-friday";
+    buttonPai.appendChild(fridayButton);
+}
+FridayDay("Sexta-feira");
+/* 5. Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira. */
+
+function sextou(arrayDezFriday) {
+    const fridayButton = document.querySelector('#btn-friday');
+    const fridayDays = document.querySelectorAll('.friday');
+    const newText = 'SEXTOU :)'
+    fridayButton.addEventListener('click', function() {
+        for (let index = 0; index < fridayDays.length; index += 1) {
+            if (fridayDays[index].innerHTML !== newText) {
+                fridayDays[index].innerHTML = newText;
+            } else {
+                fridayDays[index].innerHTML = arrayDezFriday[index];
+            }
+        }
+    })
+}
+const arrayDezFriday = [4, 11, 18, 25];
+sextou(arrayDezFriday);
