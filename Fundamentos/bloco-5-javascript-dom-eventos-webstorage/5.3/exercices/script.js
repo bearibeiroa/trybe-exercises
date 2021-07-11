@@ -38,3 +38,14 @@ function decemberDays() {
     }
 }
 decemberDays()
+
+/* 2. Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados". */
+
+function holidays(string) {
+    const buttonFather = document.querySelector('.buttons-container');
+    const createButton = document.createElement('button');
+    createButton.innerHTML = string;
+    createButton.id = 'btn-holiday';
+    buttonFather.appendChild(createButton);
+}
+holidays('Feriados');
