@@ -22,7 +22,7 @@
         <fieldset>
             <div class="line-content">
                 <label for="name">Digite o seu nome:</label>
-                <input type="text" id="name" name="name" maxlength="40" required>
+                <input type="text" id="name" name="name" maxlength="40" autofocus required>
             </div>
 
             <!-- EMAIL -->
@@ -47,37 +47,42 @@
                 <label for="city">Selecione o seu Estado:</label>
                 <select id="city" name="city" class="option-city"></select>
             </div>
-
+            <!-- MORADIA -->
             <div class="line-content">
                 <label for="moradia">Tipo de moradia:</label>
                 <input name="moradia" type="radio" id="moradia" value="moradia" required> <label for="moradia">Casa</label>
                 <input type="radio" id="moradia" name="moradia" value="moradia" required>
                 <label for="moradia">Apartamento</label>
-
             </div>
         </fieldset>
 
-
+        <!-- REQUISITO 2 -->
+        <!-- CURRICULUM -->
         <fieldset class="curriculum-fieldset">
             <div class="line-content">
                 <label for="curriculum">Resumo do currículo</label>
                 <textarea name="curriculum" id="curriculum" maxlength="1000" required></textarea>
             </div>
 
+            <!-- CARGO -->
             <div class="line-content">
                 <label for="cargo">Cargo</label>
                 <input type="text" id="cargo" maxlength="40" required>
             </div>
 
+            <!-- DESCRIÇÃO DO CARGO -->
             <div class="line-content">
                 <label for="cargo-description">Descrição do Cargo</label>
                 <input type="text" id="cargo-description" maxlength="500" required>
             </div>
 
+            <!-- DATA DE INÍCIO -->
             <div class="line-content">
                 <label for="date">Data de Início</label>
-                <input type="date" id="date" name="date" class="date-set">
+                <input type="text" id="date" name="date" class="date-set">
             </div>
+
+            <!-- BOTÃO DE ENVIO -->
             <div class="line-content">
                 <button type="submit" id="submit-button">Enviar</button>
             </div>
