@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js" async></script>
+    <title>6.1 | HTML & CSS - Forms</title>
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header class="block">
+        <h1 class="title">CADASTRO DE CURRÍCULO</h1>
+        <p class="subtitle"><em>Preencha o formulário abaixo para cadastrar o seu currículo</em></p>
+    </header>
+    <!-- FORMULÁRIO -->
+    <form action="" method="GET" class="box-style">
+
+        <!-- REQUISITO 1 -->
+        <!-- NOME -->
+
+        <div class="field">
+            <label class="label" for="name">Digite o seu nome:</label>
+            <input class="input is-normal" type="text" id="name" name="name" maxlength="40" autofocus required>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="field">
+            <label class="label" for=" email">Digite o seu e-mail: </label>
+            <input class="input is-normal" type="email " id="email " name="email " maxlength="50 " required>
+        </div>
+
+        <!-- CPF -->
+        <div class="field ">
+            <label class="label " for="cpf ">Digite o seu CPF: </label>
+            <input class="input is-normal" type="text " id="cpf " name="cpf " maxlength="11 " required>
+        </div>
+
+        <!-- CIDADE -->
+        <div class="field ">
+            <label class="label" for="city ">Qual sua cidade? </label>
+            <input class="input is-normal" type="city " id="city " name="city " maxlength="28 " required>
+        </div>
+        <!-- ESTADO -->
+        <div class="select is-multiple">
+            <label class="label " for="city ">Selecione o seu Estado:</label>
+            <select id="city " name="city " class="option-city "></select>
+        </div>
+        <br><br>
+        <!-- MORADIA -->
+        <div class="field control">
+            <label class="radio field " for="moradia ">Tipo de moradia:</label>
+
+            <input name="moradia" type="radio" id="moradia" value="moradia" required> <label for="moradia">Casa</label>
+
+            <input type="radio" id="moradia" name="moradia" value="moradia" required>
+            <label class="radio" for="moradia ">Apartamento</label>
+        </div>
+
+
+        <!-- REQUISITO 2 -->
+        <!-- CURRICULUM -->
+
+        <div class="field">
+            <label class="label " for="curriculum ">Resumo do currículo</label>
+            <textarea class="textarea" name="curriculum " id="curriculum " maxlength="1000 " required></textarea>
+        </div>
+
+        <!-- CARGO -->
+        <div class="field">
+            <label class="label" for="cargo ">Cargo</label>
+            <input class="input is-normal" type="text " id="cargo " maxlength="40 " required>
+        </div>
+
+        <!-- DESCRIÇÃO DO CARGO -->
+        <div class="field">
+            <label class="label" for="cargo-description">Descrição do Cargo</label>
+            <input class="input is-normal" type="text" id="cargo-description" maxlength="500" required>
+        </div>
+
+        <!-- DATA DE INÍCIO -->
+        <div class="field">
+            <label class="label" for="date">Data de Início</label>
+            <input class="input" type="text" id="date" name="date" class="date-set">
+        </div>
+
+        <!-- BOTÃO DE ENVIO -->
+        <div class="buttons">
+            <button class="button is-primary" type="submit " id="submit-button ">Enviar</button>
+            <button class="button is-danger">Apagar</button>
+        </div>
+
+
+
+
+    </form>
+</body>
+
+</html>
