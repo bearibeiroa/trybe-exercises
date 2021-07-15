@@ -1,27 +1,20 @@
-    header {
-        width: 80%;
-        text-align: center;
-        padding: 20px;
-        margin: 5px auto;
-        border: 1px solid black;
-    }
-    
-    .box-style {
-        width: 80%;
-        padding: 20px;
-        margin: 0px auto;
-    }
-    
-    fieldset {
-        padding: 10px;
-        border: 1px solid black;
-        border-radius: 0px;
-    }
-    
-    .curriculum-fieldset {
-        margin: 20px;
-    }
-    
-    .line-content {
-        margin: 20px;
-    }
+.speaker-form-header {
+    text-align: center;
+    padding: 20px;
+    margin: 5px auto;
+}
+
+.box-style {
+    width: 80%;
+    padding: 20px;
+    margin: 0px auto;
+    border: 1px solid black;
+}
+
+fieldset {
+    border: none;
+}
+
+.line-content {
+    margin: 20px;
+}
