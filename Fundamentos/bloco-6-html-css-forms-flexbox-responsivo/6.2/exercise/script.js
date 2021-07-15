@@ -9,6 +9,3 @@ function states() {
     }
 }
 states()
-
-
-const submit = document.querySelector('#submit');

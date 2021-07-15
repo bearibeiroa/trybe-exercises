@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js" async></script>
+    <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
     <title>6.1 | HTML & CSS - Forms</title>
 </head>
 
@@ -83,7 +84,7 @@
         <!-- DATA DE INÍCIO -->
         <div class="field">
             <label class="label" for="date">Data de Início</label>
-            <input class="input" type="text" id="date" name="date" class="date-set">
+            <input class="input" type="text" id="datepicker" name="date" class="date-set">
         </div>
 
         <!-- BOTÃO DE ENVIO -->
@@ -91,11 +92,11 @@
             <button class="button is-primary" type="submit " id="submit-button ">Enviar</button>
             <button class="button is-danger">Apagar</button>
         </div>
-
-
-
-
     </form>
+
+
+    <script src="dist/js/DatePickerX.min.js"></script>
+
 </body>
 
 </html>
