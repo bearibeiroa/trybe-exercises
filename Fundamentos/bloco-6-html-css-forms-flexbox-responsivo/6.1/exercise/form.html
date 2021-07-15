@@ -9,43 +9,51 @@
 </head>
 
 <body>
-    <header class="speaker-form-header">
+    <!-- CABEÇALHO -->
+    <header>
         <h1>CADASTRO DE CURRÍCULO</h1>
         <p><em>Preencha o formulário abaixo para cadastrar o seu currículo</em></p>
     </header>
+    <!-- FORMULÁRIO -->
     <form action="" method="GET" class="box-style">
+
+        <!-- REQUISITO 1 -->
+        <!-- NOME -->
         <fieldset>
             <div class="line-content">
-                <label for="name">Digite o seu nome: </label>
+                <label for="name">Digite o seu nome:</label>
                 <input type="text" id="name" name="name" maxlength="40" required>
             </div>
 
+            <!-- EMAIL -->
             <div class="line-content">
                 <label for="email">Digite o seu e-mail: </label>
                 <input type="email" id="email" name="email" maxlength="50" required>
             </div>
 
+            <!-- CPF -->
             <div class="line-content">
                 <label for="cpf">Digite o seu CPF: </label>
                 <input type="text" id="cpf" name="cpf" maxlength="11" required>
             </div>
 
+            <!-- CIDADE -->
             <div class="line-content">
                 <label for="city">Qual sua cidade? </label>
                 <input type="city" id="city" name="city" maxlength="28" required>
             </div>
-
+            <!-- ESTADO -->
             <div class="line-content">
                 <label for="city">Selecione o seu Estado:</label>
                 <select id="city" name="city" class="option-city"></select>
             </div>
 
             <div class="line-content">
-                <label for="moradia">Você mora em casa ou apartamento?</label>
-                <label for="moradia">Casa</label>
-                <input type="radio" id="moradia" name="moradia" required>
+                <label for="moradia">Tipo de moradia:</label>
+                <input name="moradia" type="radio" id="moradia" value="moradia" required> <label for="moradia">Casa</label>
+                <input type="radio" id="moradia" name="moradia" value="moradia" required>
                 <label for="moradia">Apartamento</label>
-                <input type="radio" id="moradia" name="moradia" required>
+
             </div>
         </fieldset>
 
@@ -70,9 +78,9 @@
                 <label for="date">Data de Início</label>
                 <input type="date" id="date" name="date" class="date-set">
             </div>
-
-            <button type="submit" id="submit-button">Enviar</button>
-
+            <div class="line-content">
+                <button type="submit" id="submit-button">Enviar</button>
+            </div>
         </fieldset>
     </form>
 </body>

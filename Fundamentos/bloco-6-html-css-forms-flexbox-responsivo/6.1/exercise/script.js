@@ -15,11 +15,3 @@ function checkDate() {
     const dateField = document.querySelector('.date-set');
 
 }
-
-const button = document.querySelector('#submit-button');
-
-
-function getUserValue(event) {
-    event.preventDefault();
-}
-button.addEventListener('click', getUserValue)
