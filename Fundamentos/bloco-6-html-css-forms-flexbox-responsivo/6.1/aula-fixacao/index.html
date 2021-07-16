@@ -11,16 +11,23 @@
 
 <body>
 
-    <h1>FORMULÁRIO DE LOGIN</h1>
-    <form action="" method="GET">
-        <input type="email" placeholder="Digite seu email" autocomplete="off" autofocus value="email" name="email">
-        <input type="password" placeholder="Digite sua senha" value="password" name="password">
-        <input type="checkbox" value="checkbox" name="checkbox">Lembre-me
-
-        <button>Entrar</button>
-
+    <h1>LOGIN</h1>
+    <form>
+        <section>
+            <div>
+                Email:<input type="email" placeholder="Digite seu email" name="email" autofocus autocomplete="off" required>
+            </div>
+            <div>
+                Senha: <input type="password" placeholder="Digite sua senha" name="password" required>
+            </div>
+            <div class="remember">
+                <input type="checkbox" value="checkbox" name="checkbox">Lembre-me
+            </div>
+            <div>
+                <button>Entrar</button>
+            </div>
+        </section>
     </form>
-
 </body>
 
 </html>
