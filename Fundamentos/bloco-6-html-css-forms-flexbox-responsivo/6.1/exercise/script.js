@@ -9,3 +9,19 @@ function states() {
     }
 }
 states()
+
+
+const submit = document.querySelector('#submit');
+
+function checkDate() {
+    const dateField = document.querySelector('.date-set').value;
+    const dateArray = dateField.split('/')
+    const date = parseInt(dateArray[0]);
+    const month = parseInt(dateArray[1]);
+    const year = parseInt(dateArray[2]);
+    if (!date > 0 && date <= 31) {
+        return { message: 'Data não foi preenchida!' }
+
+    }
+}
+submit.addEventListener('click', checkDate)

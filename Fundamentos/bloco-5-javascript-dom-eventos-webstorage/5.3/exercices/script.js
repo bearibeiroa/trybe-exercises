@@ -96,3 +96,14 @@ function sextou(arrayDezFriday) {
 }
 const arrayDezFriday = [4, 11, 18, 25];
 sextou(arrayDezFriday);
+
+/* 5. Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original. */
+const days = document.querySelectorAll('.day')
+console.log(days)
+
+function color(event) {
+    for (let index = 0; index < days.length; index += 1) {
+        days[index].style.fontSize = '25px'
+    }
+
+}
