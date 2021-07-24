@@ -25,3 +25,10 @@ const newElement = (obj, key, value) => {
 }
 console.log(newElement(lesson2,'turno','manhã'));
 
+// Questão 2
+
+const objListed = (obj) => {
+	obj = Object.keys(lesson1);
+	return obj;
+}
+console.log(objListed(lesson1));
