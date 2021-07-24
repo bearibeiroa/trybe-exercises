@@ -4,7 +4,7 @@
 
 - Note que o parâmetro da função já está sendo passado na chamada da função.
 
-[] Complete a função orderModifier() para que seu retorno seja similar a "Olá Luiz Silva, o total do seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ 50,00."
+[x] Complete a função orderModifier() para que seu retorno seja similar a "Olá Luiz Silva, o total do seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ 50,00."
 
 - Modifique o nome da pessoa compradora.
 - Modifique o valor total da compra para R$ 50,00.
