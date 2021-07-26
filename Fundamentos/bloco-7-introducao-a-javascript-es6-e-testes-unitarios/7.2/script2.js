@@ -49,3 +49,7 @@ const objValue = (obj) => {
 }
 console.log(objValue(lesson2));
 
+// Questão 5
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+console.log(allLessons);
+
