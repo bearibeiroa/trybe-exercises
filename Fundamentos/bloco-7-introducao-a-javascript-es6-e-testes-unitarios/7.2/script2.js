@@ -32,3 +32,20 @@ const objListed = (obj) => {
 	return obj;
 }
 console.log(objListed(lesson1));
+
+// Questão 3
+
+const objLength = (obj) => {
+	obj = Object.keys(obj).length;
+	return obj;
+}
+console.log(objLength(lesson1));
+
+//Questão 4
+
+const objValue = (obj) => {
+	obj = Object.values(obj);
+	return obj;
+}
+console.log(objValue(lesson2));
+
