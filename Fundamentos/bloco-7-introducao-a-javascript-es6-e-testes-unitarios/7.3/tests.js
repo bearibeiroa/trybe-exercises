@@ -11,7 +11,7 @@ function sum(a, b) {
 
 // implemente seus testes aqui
 
-assert.strictEqual(typeof sum, 'function')
+assert.strictEqual(typeof sum, 'function');
 assert.strictEqual(sum(4, 5), 9, 'O somatório de quatro mais cinco deve ser nove');
 assert.strictEqual(sum(0, 0), 0, 'O somatório de zero mais zero deve ser zero');
 assert.throws(() => {sum(4, "5")});
