@@ -52,4 +52,11 @@ console.log(objValue(lesson2));
 // Questão 5
 const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 console.log(allLessons);
+console.table(allLessons);
 
+// Questão 6
+const studentOne = allLessons.lesson1.numeroEstudantes;
+const studenteTwo = allLessons.lesson2.numeroEstudantes;
+const studentThree = allLessons.lesson3.numeroEstudantes;
+const totalNumeroEstudantes = studentOne + studenteTwo + studentThree;
+console.log(totalNumeroEstudantes);
