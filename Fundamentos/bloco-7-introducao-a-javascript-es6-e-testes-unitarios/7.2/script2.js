@@ -55,8 +55,12 @@ console.log(allLessons);
 console.table(allLessons);
 
 // Questão 6
+
 const studentOne = allLessons.lesson1.numeroEstudantes;
 const studenteTwo = allLessons.lesson2.numeroEstudantes;
 const studentThree = allLessons.lesson3.numeroEstudantes;
-const totalNumeroEstudantes = studentOne + studenteTwo + studentThree;
-console.log(totalNumeroEstudantes);
+const totalNumeroEstudantes = (allLessons) => {
+	return studentOne + studenteTwo + studentThree;
+}
+
+console.log(allLessons);
