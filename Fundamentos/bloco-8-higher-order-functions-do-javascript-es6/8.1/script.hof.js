@@ -1,4 +1,4 @@
-const newEmployees = () => {
+const newEmployees = (employeeGenerator) => {
   const employees = {
     // Criar uma função que recebe o nome como parâmetro
     id1: employeeGenerator('Pedro Guerra'),  // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
@@ -10,7 +10,7 @@ const newEmployees = () => {
 // Criar a função que gera o nome e o email
 const employeeGenerator = (nomeCompleto) => {
   const email = nomeCompleto.toLowerCase().split(' ').join('_');
-  return { nomeCompleto, email: `${email}@trybe.com` };
+  return { nomeCompleto , email: `${email}@trybe.com` };
 }
 // Retornar a função principal usando como parâmetro a que cria o nome./
-console.table(newEmployees(employeeGenerator));
+console.log(newEmployees(employeeGenerator));
