@@ -38,7 +38,6 @@
       console.log(oddsAndEvens); // será necessário alterar essa linha 😉
 ~~~
 
-
 # Parte II
 
 Abaixo, você verá algumas especificações de algoritmos para desenvolver. É fundamental que você utilize o que aprendeu sobre let , const , arrow functions , template literals e ternary operator.
