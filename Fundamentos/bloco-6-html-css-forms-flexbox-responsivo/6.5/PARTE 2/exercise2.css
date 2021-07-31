@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+@media screen and (max-width: 600px) {
+header{
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border: 1px solid red;
+}
+
+header p{
+  font-size: large;
+  text-align: center;
+  border: 1px solid red;
+}
+
+.menu-container{
+  display: flex;
+  align-content: center;
+}
+
+.menu {
+  display: flex;
+  align-self: center;
+  list-style: none;
+  border: 1px solid red;
+}
+
+.menu li {
+  margin-left: 10px;
+  display: flex;
+  align-self: center;
+}
+
+}
+
+@media screen and (min-width: 600px) {
+
+}
+
+
+@media screen and (min-width: 1000px) {
+
+}
