@@ -11,13 +11,9 @@ const testingScope = escopo => {
         // console.log(ifScope + ' o que estou fazendo aqui ? :O'); // Se necessário esta linha pode ser removida.
       }
 
-      testingScope(true);
+testingScope(true);
 
-/* Exercício 2 */
 
-const oddsAndEvens = [13, 3, 4, 10, 7, 2];
-const ascendentNumber = oddsAndEvens.sort((a, b) => a - b);
-const string = `Os números ${ascendentNumber} se encontram ordenados de forma crescente!`;
-console.log(string); // será necessário alterar essa linha 😉
+
 
 
