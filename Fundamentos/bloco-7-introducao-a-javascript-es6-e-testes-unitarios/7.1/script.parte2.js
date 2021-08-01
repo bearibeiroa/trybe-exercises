@@ -45,3 +45,24 @@ const longestWord2 = string2 => {
   return biggestWord2[0];
 }
 console.log(longestWord2('Antônio foi no banheiro e não sabemos o que aconteceu'))
+
+// Exercício 3 - arquivo exercicio3.html
+
+// Exercício 4
+
+const skills = [ 'HTML', 'CSS', 'JS', 'React', 'HoF']
+function buildEverything(paramOne) {
+  const funcOne = string => (`Tryber ${string} aqui! OK?`);
+
+  let result = `${funcOne(paramOne)} Minhas Principais habilidades são:`;
+
+  let orderedSkills = skills.sort().join(' - ');
+
+  result = ` ${result} ${orderedSkills}`
+
+  return result
+}
+console.log(buildEverything('Bea'));
+
+
+
