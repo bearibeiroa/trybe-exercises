@@ -1,4 +1,6 @@
-# Parte I
+# Exercícios de fixação sobre JavaScript ES6 - let, const, arrow functions e template literals
+
+## Parte I
 
 1. Faça as modificações necessárias na função para que o seu comportamento respeite o escopo no qual cada variável foi declarada.
 
@@ -38,7 +40,7 @@
       console.log(oddsAndEvens); // será necessário alterar essa linha 😉
 ~~~
 
-# Parte II
+## Parte II
 
 Abaixo, você verá algumas especificações de algoritmos para desenvolver. É fundamental que você utilize o que aprendeu sobre let , const , arrow functions , template literals e ternary operator.
 
