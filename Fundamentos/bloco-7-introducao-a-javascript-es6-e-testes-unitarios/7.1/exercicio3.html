@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Document</title>
+</head>
+
+
+<body>
+  <button class="event-button">Clique aqui</button>
+  <p class="counter"></p>
+</body>
+
+<script>
+const button = document.querySelector('.event-button')
+const counter = document.querySelector('.counter')
+let clickCount = 0;
+
+button.addEventListener('click', (contador) => {
+  clickCount++;
+  return counter.innerText = `Número de cliques: ${clickCount}`
+})
+
+</script>
+
+</html>
