@@ -48,14 +48,14 @@ console.log(allLessons);
 
 [x] Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
 
-[] Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
+[x] Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
 
 ```json
 console.log(getValueByNumber(lesson1, 0));
 // Output: 'Matématica'
 ```
 
-[] Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
+[x] Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
 
 ```json
 console.log(verifyPair(lesson3, 'turno', 'noite'));
@@ -63,3 +63,9 @@ console.log(verifyPair(lesson3, 'turno', 'noite'));
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
 ```
+## Bônus
+
+[] Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+
+[] Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
+
