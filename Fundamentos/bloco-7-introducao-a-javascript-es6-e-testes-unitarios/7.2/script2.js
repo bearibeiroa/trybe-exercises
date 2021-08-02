@@ -64,8 +64,24 @@ const totalNumeroEstudantes = (allLessons) => {
 }
 console.log(allLessons);
 
-//Exercício 7
+// Exercício 7
 
 const getValueByNumber = (obj, position) => Object.values(obj)[position];
 
 console.log(getValueByNumber(lesson1, 0));
+
+// Exercício 8
+
+const verifyPair = (obj, key, value) => {
+  const array = Object.entries(obj);
+  let equal = false;
+  for (index in array) {
+    if (array[index][0] === key && array[index][1] === value) equal = true
+  }
+  return equal
+  }
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+
