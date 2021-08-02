@@ -63,6 +63,3 @@ function buildEverything(paramOne) {
   return result
 }
 console.log(buildEverything('Bea'));
-
-
-
