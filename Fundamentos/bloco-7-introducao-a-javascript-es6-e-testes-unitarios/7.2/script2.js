@@ -90,9 +90,12 @@ console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 
 // Bônus - exercício 1
 
-const mathStudents = () => {
-  Object.values()
+const mathStudents = (allLessons) => {
+  const array = Object.values(allLessons)
+  return array
 }
 
 console.log('---------------');
 console.log(allLessons);
+console.log('---------------');
+console.log(mathStudents(allLessons))
