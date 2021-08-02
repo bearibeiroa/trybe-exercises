@@ -56,13 +56,16 @@ console.log(allLessons);
 
 // Exercício 6
 
-const studentOne = allLessons.lesson1.numeroEstudantes;
-const studenteTwo = allLessons.lesson2.numeroEstudantes;
-const studentThree = allLessons.lesson3.numeroEstudantes;
 const totalNumeroEstudantes = (allLessons) => {
-	return studentOne + studenteTwo + studentThree;
+  const array = Object.keys(allLessons)
+  total = 0;
+  for (index in array) {
+    const currentKey = array[index];
+    total += allLessons[currentKey].numeroEstudantes
+  }
+  return total;
 }
-console.log(allLessons);
+console.log(totalNumeroEstudantes(allLessons));
 
 // Exercício 7
 
@@ -85,3 +88,11 @@ console.log(verifyPair(lesson3, 'turno', 'noite'));
 
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 
+// Bônus - exercício 1
+
+const mathStudents = () => {
+  Object.values()
+}
+
+console.log('---------------');
+console.log(allLessons);
