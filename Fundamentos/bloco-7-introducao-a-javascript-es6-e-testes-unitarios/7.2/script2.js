@@ -18,14 +18,15 @@ const lesson3 = {
   turno: 'noite',
 };
 
-// Questão 1
+// Exercício 1
+
 const newElement = (obj, key, value) => {
 	obj[key] = value;
 	return obj;
 }
 console.log(newElement(lesson2,'turno','manhã'));
 
-// Questão 2
+// Exercício 2
 
 const objListed = (obj) => {
 	obj = Object.keys(lesson1);
@@ -33,7 +34,7 @@ const objListed = (obj) => {
 }
 console.log(objListed(lesson1));
 
-// Questão 3
+// Exercício 3
 
 const objLength = (obj) => {
 	obj = Object.keys(obj).length;
@@ -41,7 +42,7 @@ const objLength = (obj) => {
 }
 console.log(objLength(lesson1));
 
-//Questão 4
+//Exercício 4
 
 const objValue = (obj) => {
 	obj = Object.values(obj);
@@ -49,12 +50,11 @@ const objValue = (obj) => {
 }
 console.log(objValue(lesson2));
 
-// Questão 5
+// Exercício 5
 const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 console.log(allLessons);
-console.table(allLessons);
 
-// Questão 6
+// Exercício 6
 
 const studentOne = allLessons.lesson1.numeroEstudantes;
 const studenteTwo = allLessons.lesson2.numeroEstudantes;
@@ -62,5 +62,10 @@ const studentThree = allLessons.lesson3.numeroEstudantes;
 const totalNumeroEstudantes = (allLessons) => {
 	return studentOne + studenteTwo + studentThree;
 }
-
 console.log(allLessons);
+
+//Exercício 7
+
+const getValueByNumber = (obj, position) => Object.values(obj)[position];
+
+console.log(getValueByNumber(lesson1, 0));
