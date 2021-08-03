@@ -76,10 +76,10 @@ console.log(getValueByNumber(lesson1, 0));
 // Exercício 8
 
 const verifyPair = (obj, key, value) => {
-  const array = Object.entries(obj);
+  const pair = Object.entries(obj);
   let equal = false;
-  for (index in array) {
-    if (array[index][0] === key && array[index][1] === value) equal = true
+  for (index in pair) {
+    if (pair[index][0] === key && pair[index][1] === value) equal = true
   }
   return equal
   }
@@ -90,12 +90,41 @@ console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 
 // Bônus - exercício 1
 
-const mathStudents = (allLessons) => {
-  const array = Object.values(allLessons)
-  return array
+const mathStudents = (obj) => {
+  const array = Object.keys(obj);
+  let contador = 0;
+  for (index in array) {
+    const currentValue = obj[array[index]].materia;
+    if (currentValue === 'Matemática') {
+      contador += obj[array[index]].numeroEstudantes;
+    }
+  }
+  return contador;
 }
 
-console.log('---------------');
-console.log(allLessons);
-console.log('---------------');
 console.log(mathStudents(allLessons))
+
+// Bônus - exercício 2
+
+const createInfo = (obj, prof) => {
+  const array = Object.values(obj);
+  const allLessons = [];
+  let totalStudent = 0;
+  for (index in array) {
+    if (array[index].professor === prof) {
+      allLessons.push(array[index].materia);
+      totalStudent += array[index].numeroEstudantes;
+    }
+  }
+  return { aulas: allLessons, estudantes: totalStudent}
+}
+
+const createReport = (allLessons, prof) => {
+  const relatorio = {};
+  relatorio.professor = prof;
+  Object.assign(relatorio, createInfo(allLessons, prof));
+  return relatorio;
+}
+
+console.log(createReport(allLessons, 'Maria Clara'))
+
