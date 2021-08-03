@@ -90,6 +90,7 @@ function myFizzBuzz(num) {
 }
 
 ```
+
 5. Compare dois objetos para verificar se são idênticos ou não
 
 ```javascript
