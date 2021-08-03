@@ -103,3 +103,28 @@ const mathStudents = (obj) => {
 }
 
 console.log(mathStudents(allLessons))
+
+// Bônus - exercício 2
+
+const createInfo = (obj, prof) => {
+  const array = Object.values(obj);
+  const allLessons = [];
+  let totalStudent = 0;
+  for (index in array) {
+    if (array[index].professor === prof) {
+      allLessons.push(array[index].materia);
+      totalStudent += array[index].numeroEstudantes;
+    }
+  }
+  return { aulas: allLessons, estudantes: totalStudent}
+}
+
+const createReport = (allLessons, prof) => {
+  const relatorio = {};
+  relatorio.professor = prof;
+  Object.assign(relatorio, createInfo(allLessons, prof));
+  return relatorio;
+}
+
+console.log(createReport(allLessons, 'Maria Clara'))
+
