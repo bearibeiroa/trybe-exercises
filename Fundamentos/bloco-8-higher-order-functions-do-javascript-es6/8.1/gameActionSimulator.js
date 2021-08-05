@@ -26,8 +26,17 @@ const dragonDamage = () => {
 };
 
 const warriorDamage = () => {
-  let maxWarriorDamage = Math.floor((Math.random() * (warrior.strength * warrior.weaponDmg)))
+  let maxWarriorDamage = Math.floor((Math.random() * (warrior.strength * warrior.weaponDmg)));
   return maxWarriorDamage < warrior.strength ? warrior.strength : maxWarriorDamage;
 }
 
+const mageDamage = () => {
+  Math.floor((Math.random() * (mage.intelligence * 2 - mage.intelligence) + mage.intelligence));
+}
 
+const mageConsumed = () => {
+  return {
+    damage: mageDamage(),
+    mana: mage.mana < 15 ? `Não possui mana suficiente` : (mage.mana -= 15),
+  }
+}
