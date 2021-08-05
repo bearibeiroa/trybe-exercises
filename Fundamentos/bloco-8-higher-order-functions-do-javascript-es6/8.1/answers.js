@@ -1,21 +1,19 @@
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const answers = (gabarito, respostas, funcheck) => {
-  let count = 0;
-
-  for (index of gabarito) {
-    const checked = funcheck(gabarito[index], respostas[index]);
-    count += checked;
+const checker = (param1, param2) => {
+  let nota = 0;
+  for (index in param1) {
+    if (param2 !== 'N.A.') {
+      (param1[index] === param2[index]) ? nota += 1 : nota -= 0.5
+    }
   }
-  return `Resultado final: ${count} corretas`;
+  return nota;
 }
 
-console.log(answers(RIGHT_ANSWERS, STUDENT_ANSWERS, (certas, estudante) => {
-  if (certas === estudante) {
-    return 1;
-  } if (estudante === 'N.A') {
-    return 0;
-  }
-  return -0.5;
-}));
+const examScore = (gabarito, respostas, callback) => {
+  const result = callback(gabarito, respostas);
+  return `A pessoa estudante acertou ${result} questões`;
+}
+
+console.log(examScore(RIGHT_ANSWERS,STUDENT_ANSWERS,checker));
