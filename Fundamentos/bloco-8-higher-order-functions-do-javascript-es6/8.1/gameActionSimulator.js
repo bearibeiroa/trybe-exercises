@@ -19,3 +19,11 @@ const dragon = {
 };
 
 const battleMembers = { mage, warrior, dragon };
+
+const dragonDamage = () => {
+  let maxDragonDmg = Math.floor((Math.random() * (dragon.strength + 1)));
+  return maxDragonDmg < 15 ? 15 : maxDragonDmg;
+};
+
+
+
