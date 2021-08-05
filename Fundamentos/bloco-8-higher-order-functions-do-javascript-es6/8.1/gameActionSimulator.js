@@ -25,5 +25,9 @@ const dragonDamage = () => {
   return maxDragonDmg < 15 ? 15 : maxDragonDmg;
 };
 
+const warriorDamage = () => {
+  let maxWarriorDamage = Math.floor((Math.random() * (warrior.strength * warrior.weaponDmg)))
+  return maxWarriorDamage < warrior.strength ? warrior.strength : maxWarriorDamage;
+}
 
 
