@@ -15,7 +15,6 @@ function myRemove(arr, item) {
   return newArr;
 }
 
-
 module.exports = {
   sum,
   myRemove,
