@@ -5,7 +5,6 @@ const sum = (a, b) => {
   return a + b;
 };
 
-
 function myRemove(arr, item) {
   let newArr = [];
   for (let index = 0; index < arr.length; index += 1) {
@@ -16,6 +15,8 @@ function myRemove(arr, item) {
   return newArr;
 }
 
+
 module.exports = {
   sum,
+  myRemove,
 };

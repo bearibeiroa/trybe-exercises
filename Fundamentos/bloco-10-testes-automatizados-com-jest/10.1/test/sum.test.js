@@ -1,4 +1,4 @@
-const { sum } = require('../src/sum.js');
+const { sum } = require('../src/funcs.js');
 
 describe('testa função de soma', () => {
 
