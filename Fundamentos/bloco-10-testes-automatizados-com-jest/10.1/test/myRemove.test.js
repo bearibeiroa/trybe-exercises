@@ -16,8 +16,9 @@ describe('A função myRemove', () => {
 
   // Não entendi como resolver esse
   test('o array não sofreu alteração', () => {
-    const arr = [9, 10, 11, 12];
-    expect(myRemove(arr)).toEqual(expect.arrayContaining(arr))
+    const arr = [1, 2, 3, 4];
+    myRemove(arr, 3);
+    expect(arr).toEqual([1, 2, 3, 4])
   });
 
   test('a chamada myRemove([1, 2, 3, 4], 5) retorna [1, 2, 3, 4]', () => {
