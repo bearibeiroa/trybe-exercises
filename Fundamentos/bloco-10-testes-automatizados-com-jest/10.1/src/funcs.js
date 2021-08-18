@@ -77,6 +77,26 @@ function decode(string) {
   return stringDecode;
 }
 
+function techList(techList, name) {
+    let arrayList = [];
+    techList.sort();
+    if (techList.length === 0) {
+        return "Vazio!";
+    }
+    for (index = 0; index < techList.length; index += 1) {
+        let objectList = {
+            tech: '',
+            name: name,
+        };
+        objectList.tech = techList[index];
+        arrayList.push(objectList);
+    }
+
+    return arrayList;
+}
+
+
+
 module.exports = {
   sum,
   myRemove,
@@ -87,4 +107,5 @@ module.exports = {
   obj3,
   encode,
   decode,
+  techList,
 };
