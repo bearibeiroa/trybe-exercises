@@ -1,4 +1,4 @@
-const { uppercase } = require('../src/upperCase.js');
+const { uppercase } = require('../src/funcs.js');
 const { it } = require('@jest/globals');
 
 it('uppercase "test" to equal "TEST"', (done) => {
