@@ -20,6 +20,11 @@ describe('A função encode e decode', () => {
     expect(encode('Go Trybe!')).toBe('G4 Tryb2!');
   })
 
+  test('a string que é retornada pelas funções têm o mesmo número de caracteres que a string passada como parâmetro', () => {
+    expect(encode('hi there!').length).toBe(9)
+
+  })
+
 });
 
 describe('A função decode', () => {
@@ -40,6 +45,11 @@ describe('A função decode', () => {
     expect(decode('h3 th2r2!')).toBe('hi there!');
     expect(decode('V1m4 q52 V1m4!')).toBe('Vamo que Vamo!');
     expect(decode('G4 Tryb2!')).toBe('Go Trybe!');
+  })
+
+  test('a string que é retornada pelas funções têm o mesmo número de caracteres que a string passada como parâmetro', () => {
+    expect(decode('h3 th2r2!').length).toBe(9)
+
   })
 
 });
