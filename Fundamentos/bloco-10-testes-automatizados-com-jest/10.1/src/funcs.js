@@ -52,11 +52,29 @@ const obj3 = {
 
 // Parte II
 function encode(string) {
-
+  const stringEncode = string.split('')
+    .map((letter) => {
+      if (letter === 'a') return '1';
+      if (letter === 'e') return '2';
+      if (letter === 'i') return '3';
+      if (letter === 'o') return '4';
+      if (letter === 'u') return '5';
+      return letter;
+    }).join('');
+  return stringEncode;
 }
 
 function decode(string) {
-
+  const stringDecode = string.split('')
+    .map((letter) => {
+      if (letter === '1') return 'a';
+      if (letter === '2') return 'e';
+      if (letter === '3') return 'i';
+      if (letter === '4') return 'o';
+      if (letter === '5') return 'u';
+      return letter;
+    }).join('');
+  return stringDecode;
 }
 
 module.exports = {
