@@ -50,6 +50,14 @@ const obj3 = {
   description: 'My Description',
 };
 
+// Parte II
+function encode(string) {
+
+}
+
+function decode(string) {
+
+}
 
 module.exports = {
   sum,
@@ -59,4 +67,6 @@ module.exports = {
   obj1,
   obj2,
   obj3,
+  encode,
+  decode,
 };
