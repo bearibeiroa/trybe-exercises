@@ -1,4 +1,4 @@
 # VSCode repo settings
 .vscode
 node_modules/
-
+.DS_Store
