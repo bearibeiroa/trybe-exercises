@@ -9,9 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^7.32.0"
-  },
-  "dependencies": {
+    "eslint": "^7.32.0",
     "eslint-config-trybe-fundamentals": "^1.1.1"
-  }
+  },
+  "dependencies": {}
 }
