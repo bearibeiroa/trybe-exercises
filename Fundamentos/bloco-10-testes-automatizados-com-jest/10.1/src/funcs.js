@@ -1,3 +1,4 @@
+// Questão 1
 function myRemove(arr, item) {
   const newArr = [];
   for (let index = 0; index < arr.length; index += 1) {
@@ -8,6 +9,7 @@ function myRemove(arr, item) {
   return newArr;
 }
 
+// Questão 2
 function sum(a, b) {
   if (typeof a !== 'number' || typeof b !== 'number') {
     throw new Error('parameters must be numbers');
@@ -16,6 +18,7 @@ function sum(a, b) {
   return a + b;
 }
 
+// Questão 3
 function myRemoveWithoutCopy(arr, item) {
   for (let index = 0, len = arr.length; index < len; index += 1) {
     if (arr[index] === item) {
@@ -28,10 +31,20 @@ function myRemoveWithoutCopy(arr, item) {
   return arr;
 }
 
+// Questão 4
+function myFizzBuzz(num) {
+  if (typeof num !== 'number') return false;
+  if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
+  if (num % 3 === 0) return 'fizz';
+  if (num % 5 === 0) return 'buzz';
+  return num;
+}
+
+console.log(myFizzBuzz('17'));
+
 module.exports = {
   myRemove,
   sum,
   myRemoveWithoutCopy,
+  myFizzBuzz,
 };
-
-
