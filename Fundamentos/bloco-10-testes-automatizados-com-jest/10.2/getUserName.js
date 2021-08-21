@@ -14,3 +14,5 @@ const findUserById = (id) => new Promise((resolve, reject) => {
 });
 
 const getUserName = (userId) => findUserById(userId).then((user) => user.name);
+
+module.exports = getUserName;
