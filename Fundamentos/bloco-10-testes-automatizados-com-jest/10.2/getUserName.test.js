@@ -9,10 +9,12 @@ describe('testa a função getUserName', () => {
     expect(typeof getUserName).toBe('function');
   });
 
-  test('quando o usuário é encontrado ', () => getUserName(1)
-      .then((user) => {
-        expect(user).toBe('Mark');
-      }));
+  test('quando o usuário é encontrado ', () => {
+    expect.assertions(1);
+    getUserName(1).then((user) => {
+      expect(user).toBe('Mark');
+    });
+  });
 
   test('retorna um erro quando usuário não é encontrado', () => {
     expect.assertions(1);
