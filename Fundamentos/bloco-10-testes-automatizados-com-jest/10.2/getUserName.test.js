@@ -22,3 +22,23 @@ describe('testa a função getUserName', () => {
       .toMatch('User with 3 not found'));
   });
 });
+
+/* 3 - Reescreva o teste do exercício anterior, desta vez utilizando a sintaxe de async/await .
+Dica: Utilize o try/catch para o caso de erro. */
+
+describe('Refatora teste com try/catch', () => {
+  test('quando usuário é encontrado', async () => {
+    const data = await getUserName(2);
+    expect(data).toEqual('Paul');
+  });
+
+  test('retorna um erro quando usuário não é encontrado', async () => {
+    expect.assertions(1);
+    try {
+      await getUserName(3);
+    } catch (error) {
+      expect(error.message)
+        .toMatch('User with 3 not found');
+    }
+  });
+});
