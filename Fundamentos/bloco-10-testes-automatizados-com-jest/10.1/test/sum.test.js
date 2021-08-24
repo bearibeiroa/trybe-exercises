@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-unresolved
-const sum = require('../src/sum');
+const { sum } = require('../src/funcs');
 
 describe('Testa que a função sum', () => {
   it('existe', () => {
