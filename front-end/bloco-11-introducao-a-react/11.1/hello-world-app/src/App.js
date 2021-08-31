@@ -3,16 +3,16 @@ import './App.css';
 const array = ['HTML', 'CSS', 'JS']
 const Task = (value) => {
   return (
-    <>
-    { value.map((item) => <li>{ item }</li>)}
-    </>
+    <li>{value}</li>
   );
 }
+const map = (array) => array.map((item) => Task(item));
+
 
   function App() {
   return (
     <ul className="ListTask">
-      { Task(array) }
+      { map(array) }
     </ul>
   );
 }
