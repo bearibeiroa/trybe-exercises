@@ -1,5 +1,7 @@
-import React from 'react'
-import Pokemon from './Pokemon'
+import React from 'react';
+import Pokemon from './Pokemon';
+
+{/* Nesse arquivo é onde eu listo os pokemons. Faço com eles apareçam na tela de forma dinâmica */}
 class Pokedex extends React.Component {
   render() {
     const { pokemons } = this.props;
