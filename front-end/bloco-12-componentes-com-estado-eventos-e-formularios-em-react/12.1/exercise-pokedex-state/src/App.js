@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import pokemons from './data';
-import Pokedex from './Components/Pokedex'
+import Pokedex from './Components/Pokedex';
+import Button from './Components/Button';
 
-class App extends React.Component {
+class App extends Component {
+  constructor() {
+    super();
+    this.state
+  }
+
   render() {
     return (
       <div className="App">
