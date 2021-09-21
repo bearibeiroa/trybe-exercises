@@ -7,7 +7,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Pokedéx React</h1>
+        <h1>Pokedéx React - Estados e Eventos</h1>
         <Pokedex pokemons={pokemons} />
       </div>
     );
