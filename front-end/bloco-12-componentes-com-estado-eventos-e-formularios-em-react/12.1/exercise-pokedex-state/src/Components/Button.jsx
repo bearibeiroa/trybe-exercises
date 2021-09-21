@@ -4,7 +4,7 @@ class Button extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.props.handleClick}>Próximo</button>
+        <button onClick={this.props.handleClick} className="button-next">PRÓXIMO</button>
       </div>
     )
   }

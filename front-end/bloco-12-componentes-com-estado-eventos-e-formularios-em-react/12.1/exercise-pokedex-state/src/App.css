@@ -33,3 +33,12 @@ body {
 	justify-content: center;
 	padding: 10px;
 }
+
+.button-next {
+  padding: 10px 20px;
+  font-family: 'Poppins' , sans-serif;
+  background-color: blueviolet;
+  border: 1px solid blueviolet;
+  color: white;
+  font-weight: 700;
+}
