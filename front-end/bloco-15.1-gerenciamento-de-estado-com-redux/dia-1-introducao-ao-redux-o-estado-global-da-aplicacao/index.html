@@ -41,6 +41,9 @@
         colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
         index: 0,
       };
+      //Exercício 3
+      const nextColor = 'NEXT_COLOR';
+      const previousColor = 'PREVIOUS_COLOR';
 
       //Exercício 2
       const reducer = (state = ESTADO_INICIAL, action) => { return state }
@@ -49,6 +52,17 @@
       //Exercício 1
       const store = Redux.createStore(reducer);
       console.log(store)
+
+      // Exercício 4
+      document.getElementById('previous').addEventListener('click', () => {
+        store.dispatch({ type: previousColor, index: 1 });
+      })
+
+      document.getElementById('next').addEventListener('click', () => {
+        store.dispatch({ type: nextColor, index: 1 });
+      })
+
+
     </script>
   </body>
 
