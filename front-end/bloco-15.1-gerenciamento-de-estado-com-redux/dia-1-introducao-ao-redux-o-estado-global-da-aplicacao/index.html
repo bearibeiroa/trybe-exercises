@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- importação do redux via CDN -->
     <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
     <style>
       body {
@@ -40,8 +41,14 @@
         colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
         index: 0,
       };
+
+      //Exercício 2
+      const reducer = (state = ESTADO_INICIAL, action) => { return state }
+
+
       //Exercício 1
-      const store = Redux.createStore();
+      const store = Redux.createStore(reducer);
+      console.log(store)
     </script>
   </body>
 
