@@ -46,22 +46,46 @@
       const previousColor = 'PREVIOUS_COLOR';
 
       //Exercício 2
-      const reducer = (state = ESTADO_INICIAL, action) => { return state }
-
+      const reducer = (state = ESTADO_INICIAL, action) => {
+        switch (action.type) {
+          case nextColor:
+            return {
+              ...state,
+              index: state.index === state.colors.length - 1 ? 0 : state.index + 1,
+            };
+          case previousColor:
+            return {
+              ...state,
+              index: state.index === 0 ? state.colors.length - 1 : state.index - 1,
+            };
+          default:
+            return state;
+        }
+      }
 
       //Exercício 1
       const store = Redux.createStore(reducer);
-      console.log(store)
+      // console.log(store)
 
       // Exercício 4
-      document.getElementById('previous').addEventListener('click', () => {
-        store.dispatch({ type: previousColor, index: 1 });
-      })
-
       document.getElementById('next').addEventListener('click', () => {
-        store.dispatch({ type: nextColor, index: 1 });
+        store.dispatch({ type: nextColor });
       })
 
+      document.getElementById('previous').addEventListener('click', () => {
+        store.dispatch({ type: previousColor });
+      })
+
+
+      const spanColor = document.getElementById('value');
+      const bgColor = document.getElementById('container');
+
+      store.subscribe(() => {
+        const {colors, index } = store.getState();
+        spanColor.innerHTML = colors[index];
+        bgColor.style.backgroundColor = colors[index];
+
+      })
 
     </script>
   </body>
