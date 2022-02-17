@@ -1,6 +1,3 @@
-const peso = 80;
-const altura = 1.80;
+const imc = (weight, height) => weight / height ^ 2;
 
-const IMC = peso / altura ^ 2
-
-console.log(IMC)
+module.exports = imc;
