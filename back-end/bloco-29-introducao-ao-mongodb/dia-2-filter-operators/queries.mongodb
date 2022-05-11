@@ -1,0 +1,46 @@
+use('class');
+
+// 🚀 Exercício 1: Inspecione um documento para que você se familiarize com a estrutura. Entenda os atributos e os níveis existentes.
+
+db.superheroes.find({});
+
+// 🚀 Exercício 2: Selecione todos os super-heróis com menos de 1.80m de altura. Lembre-se de que essa informação está em centímetros.
+
+use('class');
+db.superheroes.find( {"aspects.height": { $lt : 180 } })
+
+// 🚀 Exercício 3: Retorne o total de super-heróis menores que 1.80m.
+
+use('class');
+db.superheroes.countDocuments( { "aspects.height": { $lt : 180 } })
+
+// Exercício 4: Retorne o total de super-heróis com até 1.80m.
+
+use('class');
+db.superheroes.countDocuments( {"aspects.height": { $lte : 180 } })
+
+// Exercício 5: Selecione um super-herói com 2.00m ou mais de altura.
+
+use('class');
+db.superheroes.find( {"aspects.height": { $gt : 180 } }).limit(1)
+
+// Exercício 6: Retorne o total de super-heróis com 2.00m ou mais.
+
+use('class');
+db.superheroes.find( {"aspects.height": { $gte : 180 } })
+
+// Exercício 7: Selecione todos os super-heróis que têm olhos verdes.
+
+use('class');
+db.superheroes.find( {"aspects.eyeColor": "green" })
+
+// Exercício 8: Retorne o total de super-heróis com olhos azuis.
+
+use('class');
+db.superheroes.countDocuments( {"aspects.eyeColor": "blue" })
+
+// 🚀 Exercício 9: Utilizando o operador $in, selecione todos os super-heróis com cabelos pretos ou carecas ("No Hair").
+
+use('class');
+db.superheroes.find({ "hairColor": { $in: ["Black", "No Hair"] }})
+
