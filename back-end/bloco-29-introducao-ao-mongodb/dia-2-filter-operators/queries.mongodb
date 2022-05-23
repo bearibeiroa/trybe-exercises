@@ -7,7 +7,7 @@ db.superheroes.find({});
 // 🚀 Exercício 2: Selecione todos os super-heróis com menos de 1.80m de altura. Lembre-se de que essa informação está em centímetros.
 
 use('class');
-db.superheroes.find( {"aspects.height": { $lt : 180 } })
+db.superheroes.find( {"aspects.height": { $lt : 180 } }).toArray()
 
 // 🚀 Exercício 3: Retorne o total de super-heróis menores que 1.80m.
 
@@ -32,7 +32,7 @@ db.superheroes.find( {"aspects.height": { $gte : 180 } })
 // Exercício 7: Selecione todos os super-heróis que têm olhos verdes.
 
 use('class');
-db.superheroes.find( {"aspects.eyeColor": "green" })
+db.superheroes.find( {"aspects.eyeColor": "green" }).toArray();
 
 // Exercício 8: Retorne o total de super-heróis com olhos azuis.
 
@@ -42,7 +42,7 @@ db.superheroes.countDocuments( {"aspects.eyeColor": "blue" })
 // 🚀 Exercício 9: Utilizando o operador $in, selecione todos os super-heróis com cabelos pretos ou carecas ("No Hair").
 
 use('class');
-db.superheroes.find({ "aspects.hairColor": { $in: ["Black", "No Hair"] }})
+db.superheroes.find({ "aspects.hairColor": { $in: ["Black", "No Hair"] }}).toArray();
 
 // Exercício 10: Retorne o total de super-heróis com cabelos pretos ou carecas ("No Hair").
 
@@ -53,3 +53,21 @@ db.superheroes.countDocuments({ "aspects.hairColor": { $in: ["Black", "No Hair"]
 
 use('class');
 db.superheroes.countDocuments({ "aspects.hairColor": { $nin: ["Black", "No Hair"] }})
+
+// 🚀 Exercício 12: Utilizando o operador $not, retorne o total de super-heróis que não tenham mais de 1.80m de altura.
+
+use('class')
+db.superheroes.countDocuments({
+  "aspects.height": { $not: {$gt: 180}}
+})
+
+// Exercício 13: Selecione todos os super-heróis que não sejam humanos nem sejam maiores do que 1.80m.
+
+use('class')
+db.superheroes.find({ $nor: [{"race": "Human"}, {"aspects.height": { $gt: 180 } }]}).toArray()
+
+// Exercício 14: Selecione todos os super-heróis com 1.80m ou 2.00m de altura e que sejam publicados pela Marvel Comics.
+
+use('class')
+db.superheroes.find({
+  $or:[{ "aspects.height": {$in: [180, 200]} }, { $and: [{"publisher": "Marvel Comics" }]}] }).toArray();
