@@ -22,4 +22,9 @@ export default class WordlCupService {
     const data = await this.worldCupModel.editGame(id, bookData);
     return data;
   }
+
+  public async deleteGame(champions: string): Promise<IWorldCup | null> {
+    const data = await this.worldCupModel.deleteGame(champions);
+    return data;
+  }
 }

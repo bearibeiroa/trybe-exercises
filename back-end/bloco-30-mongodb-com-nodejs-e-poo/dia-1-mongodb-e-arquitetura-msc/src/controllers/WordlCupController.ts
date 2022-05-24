@@ -52,5 +52,19 @@ export default class WolrdCupController {
       } catch (err: unknown) {
         return res.status(500).send({ message: this.INTERNAL_ERROR });
       }
+  };
+  
+  public deleteGame = async (req: Request, res: Response):
+    Promise<Response> => {
+      try {
+        const { champions } = req.params;
+        const game = await this.worldCupService.deleteGame(champions);
+        if (game) {
+          return res.status(200).send(game);
+        }
+        return res.status(404).send({ message: this.NOT_FOUND });
+      } catch (err: unknown) {
+        return res.status(500).send({ message: this.INTERNAL_ERROR });
+      }
     };
 }

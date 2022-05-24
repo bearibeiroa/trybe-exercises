@@ -29,4 +29,9 @@ export default class WorldCupModel {
     );
     return data;
   }
+
+  public async deleteGame(champions: string): Promise<IWorldCup | null> {
+    const game = await this.worldCupModel.findOneAndDelete({champions});
+    return game;
+  }
 }
