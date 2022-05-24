@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import { IWorldCup } from '../schemas/WorldCupSchema';
 import WordlCupService from '../services/WordlCupService';
 
 export default class WolrdCupController {
@@ -27,6 +28,15 @@ export default class WolrdCupController {
       return res.status(200).send(games);
     } catch (err) {
       return res.status(500).send({ message: this.INTERNAL_ERROR });
+    }
+  };
+
+  public createGame = async (req: Request, res: Response): Promise<Response> => {
+    try {
+      const game = await this.worldCupService.createGame(req.body);
+      return res.status(201).send(game);
+    } catch (err: unknown) {
+      return res.status(500).send({ message: this.NOT_FOUND });
     }
   };
 }

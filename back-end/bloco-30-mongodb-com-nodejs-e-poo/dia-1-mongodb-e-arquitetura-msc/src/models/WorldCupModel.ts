@@ -15,4 +15,9 @@ export default class WorldCupModel {
     const games = await this.worldCupModel.find({ year });
     return games;
   } 
+
+  public async createGame (gameData:object): Promise<IWorldCup> {
+    const games = await this.worldCupModel.create(gameData);
+    return games;
+  } 
 }

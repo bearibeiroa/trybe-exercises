@@ -13,4 +13,8 @@ export default class WordlCupService {
     const games = await this.worldCupModel.getWorldCupsByYear(year);
     return games;
   }
+  public async createGame (gameData : object): Promise<IWorldCup > {
+    const games = await this.worldCupModel.createGame(gameData);
+    return games;
+  }
 }

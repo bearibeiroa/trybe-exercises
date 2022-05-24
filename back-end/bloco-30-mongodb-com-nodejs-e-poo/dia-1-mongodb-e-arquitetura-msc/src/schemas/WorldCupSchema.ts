@@ -22,4 +22,4 @@ export const WorldCupSchema = new Schema<IWorldCup>({
   bestPlayer: { type: String, required: true },
   bestGoalkeeper: { type: String, required: true },
   bestYoungPlayer: { type: String, required: true }
-});
+}, { versionKey: false });
