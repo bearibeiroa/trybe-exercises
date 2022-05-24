@@ -10,4 +10,9 @@ export default class WorldCupModel {
     const games = await this.worldCupModel.find();
     return games;
   } 
+
+  public async getWorldCupsByYear (year:number): Promise<IWorldCup[]> {
+    const games = await this.worldCupModel.find({ year });
+    return games;
+  } 
 }
