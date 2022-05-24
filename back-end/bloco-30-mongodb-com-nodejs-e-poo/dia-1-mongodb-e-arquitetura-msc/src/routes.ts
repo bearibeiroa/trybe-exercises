@@ -5,9 +5,10 @@ const routes = Router();
 
 const worldCupController = new WordlCupController();
 
-routes.get('/wordlcups', worldCupController.getGames);
-routes.get('/wordlcups/:year', worldCupController.getGamesByYear);
-routes.post('/wordlcups', worldCupController.createGame);
+routes.get('/worldcups', worldCupController.getGames);
+routes.get('/worldcups/:year', worldCupController.getGamesByYear);
+routes.post('/worldcups', worldCupController.createGame);
+routes.put('/worldcups/:id', worldCupController.updateGame);
 
 export default routes;
 

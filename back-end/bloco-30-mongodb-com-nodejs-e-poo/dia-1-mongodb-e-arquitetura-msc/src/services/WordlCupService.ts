@@ -17,4 +17,9 @@ export default class WordlCupService {
     const games = await this.worldCupModel.createGame(gameData);
     return games;
   }
+
+  public async updateGame(id: string, bookData: object): Promise<IWorldCup | null> {
+    const data = await this.worldCupModel.editGame(id, bookData);
+    return data;
+  }
 }

@@ -19,5 +19,14 @@ export default class WorldCupModel {
   public async createGame (gameData:object): Promise<IWorldCup> {
     const games = await this.worldCupModel.create(gameData);
     return games;
-  } 
+  }
+
+  async editGame(id: string, bookData: object): Promise<IWorldCup | null> {
+    const data = await this.worldCupModel.findOneAndUpdate(
+      { _id: id },
+      { ...bookData },
+      { new: true }
+    );
+    return data;
+  }
 }

@@ -39,4 +39,18 @@ export default class WolrdCupController {
       return res.status(500).send({ message: this.NOT_FOUND });
     }
   };
+  
+  public updateGame = async (req: Request, res: Response):
+    Promise<Response> => {
+      try {
+        const { id } = req.params;
+        const game = await this.worldCupService.updateGame(id, req.body);
+        if (game) {
+          return res.status(200).send(game);
+        }
+        return res.status(404).send({ message: this.NOT_FOUND });
+      } catch (err: unknown) {
+        return res.status(500).send({ message: this.INTERNAL_ERROR });
+      }
+    };
 }
